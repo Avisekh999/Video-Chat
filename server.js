@@ -37,8 +37,9 @@ io.on('connection', socket => {
       socket.on('disconnect', () => {
         socket.to(roomId).broadcast.emit('user-disconnected', userId)
       })
-    })
+    
   })
+})
   
   server.listen(process.env.PORT||4000);
   
